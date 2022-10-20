@@ -1,0 +1,117 @@
+.header {
+     display: flex;
+     background-color: transparent;
+     background: none;
+     position: fixed;
+     width: 100vw;
+     top: 0;
+     margin: 15px;
+     margin-top: 15px;
+     z-index: 100;
+}
+
+.header__logo {
+    height: 24px;
+    width: 100px;
+    margin-top: 7px;
+}
+
+.header__center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.header__center>p{
+	padding: 10px 12px;
+	border-radius: 8px;
+	text-transform: capitalize;
+	transition: background 0.3s linear;
+    cursor: pointer;
+}
+
+.header__center>p:hover{
+	background: #0000001c;
+}
+
+.header__right {
+    display: flex;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    padding-right: 20px;
+}
+
+.header__right>p, .header__right>span{
+    padding: 10px 12px;
+	border-radius: 8px;
+	text-transform: capitalize;
+	transition: background 0.3s linear;
+    cursor: pointer;
+}
+
+.header__right>p:hover, .header__right>span:hover{
+    background: #0000001c;
+}
+
+.nav__mobile {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    width: 300px;
+    z-index: 10;
+    text-align: start;
+    transition: transform 0.2s;
+}
+
+.nav__mobile > div:first-child {
+    padding: 20px;
+}
+.nav__mobile div span {
+    padding: 20px;
+}
+
+.nav__mobile > div:last-child {
+    padding: 5px 30px;
+    margin-right: 20px;
+}
+.nav__mobile div li {
+    width: 100%;
+	padding: 1.2rem 0;
+	padding-left: 2rem;
+	margin-bottom: 0.5rem;
+	cursor: pointer;
+	border-radius: 1.2rem;
+	transition: background-color 0.33s ease;
+    margin-bottom: 15px;
+    list-style: none;
+}
+
+.nav__mobile div li:hover {
+	background: #0000000d;
+}
+
+.nav__mobile div li a {
+    text-decoration: none;
+    padding: 4px 8px;
+    font-size: 18px;
+    color: #393c41;
+    font-weight: 500;
+}
+.nav__mobile>p{
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media(max-width: 768px) {
+    .header__center {
+        display: none;
+    }
+    .header__right>p{
+        display: none;
+    }
+    .header {
+        justify-content: space-between;
+    }
+}
